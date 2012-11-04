@@ -39,3 +39,4 @@ target/test-classes/se/ithuset/greenbean/supplier/ExampleServiceTests.class
 
 .idea
 *.iml
+/target
