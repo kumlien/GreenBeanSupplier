@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:spring="http://www.springframework.org/schema/beans" 
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:context="http://www.springframework.org/schema/context"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
-		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
 	<description>Example configuration to get you started.</description>
 
@@ -16,10 +14,10 @@
 		id="ftpServer" anon-enabled="true">
 		<listeners>
             <nio-listener name="default" port="2222" implicit-ssl="false" idle-timeout="60" local-address="0.0.0.0">
-                <data-connection idle-timeout="60">
-                    <active enabled="true" local-address="0.0.0.0" local-port="2323" ip-check="true"/>
-                    <passive ports="123-125" address="0.0.0.0" external-address="0.0.0.0" />
-                </data-connection>           
+                <!--<data-connection idle-timeout="60">-->
+                    <!--<active enabled="true" local-address="0.0.0.0" local-port="2323" ip-check="true"/>-->
+                    <!--&lt;!&ndash;passive ports="123-125" address="0.0.0.0" external-address="0.0.0.0" /&ndash;&gt;-->
+                <!--</data-connection>           -->
             </nio-listener>
         </listeners>
        	<file-user-manager encrypt-passwords="clear" file="users.properties"/>
