@@ -14,10 +14,10 @@
 		id="ftpServer" anon-enabled="true">
 		<listeners>
             <nio-listener name="default" port="2222" implicit-ssl="false" idle-timeout="60" local-address="0.0.0.0">
-                <!--<data-connection idle-timeout="60">-->
-                    <!--<active enabled="true" local-address="0.0.0.0" local-port="2323" ip-check="true"/>-->
-                    <!--&lt;!&ndash;passive ports="123-125" address="0.0.0.0" external-address="0.0.0.0" /&ndash;&gt;-->
-                <!--</data-connection>           -->
+                <data-connection idle-timeout="60">
+                    <active enabled="true" local-address="0.0.0.0" local-port="2323" ip-check="true"/>
+                    <passive ports="1230-1250" address="0.0.0.0" external-address="0.0.0.0" />
+                </data-connection>
             </nio-listener>
         </listeners>
        	<file-user-manager encrypt-passwords="clear" file="users.properties"/>
